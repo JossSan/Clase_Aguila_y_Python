@@ -1,0 +1,28 @@
+# una condicion 
+
+edad = entero(ingresar("Edad: "))
+
+
+si edad == 0 {
+    imprimir("No existes aún")
+} 
+sino si edad > 0 y edad < 18 {
+    imprimir("Eres menor de edad")
+} 
+sino si edad >= 18 y edad <= 130 {
+    imprimir("Eres mayor de edad")
+} 
+sino si edad > 130 {
+    imprimir("Ya dejaste este mundo")
+} 
+sino {
+    imprimir("Dato invalido")
+    }
+
+}
+
+
+
+
+
+# multiple condicion

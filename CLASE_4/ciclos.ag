@@ -1,0 +1,45 @@
+# intentos = 0
+
+# mientras intentos < 3 {
+#     clave = ingresar("Ingrese su contraseña: ")
+#     intentos = intentos + 1
+
+#     si clave == 1234 {
+#         imprime("Acceso concedido")
+#         romper
+#     }
+
+#     imprime("Acceso denegado")
+#     imprime(a"Contraseña incorrecta. Intentos restantes: {3 - intentos}")
+    
+# }
+
+# imprime("ADIOS")
+
+
+para intentos en rango(3){
+    clave = entero(ingresar("Ingrese su contraseña: "))
+    si clave == 1234{
+        imprimir("Acceso concedido")
+        romper
+    } sino{
+    imprimir("Acceso denegado")
+    imprimir(a"Contraseña incorrecta.Le quedan {2-intentos} intentos")
+    imprimir("Usuario bloqueado")
+} 
+
+}
+#Bucles anidados
+para i = 1 hasta 2{
+    para j = 2 hasta 3{
+        para k = 3 hasta 4{
+            imprimir(a"Resultado de cuadricula es: {i},{j},{k}")
+        }
+    }
+}
+# Cuenta Regresiva
+n = 10
+mientras n >= 0 {
+    imprimir(n)
+    n = n - 2
+}

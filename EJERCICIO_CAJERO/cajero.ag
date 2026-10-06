@@ -1,0 +1,120 @@
+
+# hola mundo
+# imprimir("hola mundo")
+
+# saldo = 3000
+# imprimir("")
+# imprimir("\tBIENVENIDO AL MENU DE SU CAJERO - ELIJA UNA OPCION")
+# imprimir("--------------------------------------------------------------")
+# imprimir("1. Ingresar dinero a la cuenta")
+# imprimir("2. Retirar dinero de cuenta")
+# imprimir("3. Saldo de cuenta")
+# imprimir("4. Salir")
+# imprimir("--------------------------------------------------------------")
+# opcion = entero(leer("Digite una opcion del MENU: "))
+
+# si opcion == 1{
+#     ingreso = decimal(leer("Cuanto dinero desea ingresar: "))
+#     saldo = saldo + ingreso
+#     imprimir(a"Dinero en la cuenta: {saldo}")
+# }
+# sino si opcion == 2{
+#     retirar = decimal(leer("Cuanto dinero desea retirar: "))
+#     si retirar > saldo{
+#         imprimir("No cuenta con esa cantidad")
+#     } sino{
+#         saldo = saldo - retirar
+#         imprimir(a"Dinero en la cuenta: {saldo}")
+#     }
+# }
+# sino si opcion == 3{
+#     imprimir(a"Su saldo actual es: {saldo}")
+# }
+# sino si opcion == 4{
+#     imprimir("Gracias por usar nuestro cajero automatico")
+# }
+# sino{
+#     imprimir("Ups!, seleccione una opcion valida")
+# }
+
+imprimir('"Bienvenido a su cajero automático"')
+imprimir("-----------------------------------")
+imprimir("  ¿Qué operación desea realizar?")
+imprimir("-----------------------------------")
+imprimir("(1) Ingresar dinero a su cuenta ")
+imprimir("(2) Retirar dinero de su cuenta ")
+imprimir("(3) Mostrar dinero disponible ")
+imprimir("(4) Salir")
+
+saldo_inicial = 1000
+
+mientras verdadero {
+    intentar {
+        imprimir("------------------------------------------------")
+        operacion = entero(ingresar("Seleccione la operación que desea realizar: "))
+        imprimir("------------------------------------------------")
+        si operacion < 1 o operacion > 4:
+            imprimir("Por favor, ingrese un número válido de operación.")
+            continue
+    except ValueError:
+        imprimir("------------------------------------------------")
+        imprimir("Por favor, ingrese un número válido.")
+        imprimir("------------------------------------------------")
+        continuar
+
+    si operacion == 1:
+        imprimir("------------------------------------------------")
+        dinero = decimal(ingresar("Cuánto dinero desea ingresar: "))
+        si dinero < 0{
+            imprimir("Por favor, ingrese una cantidad positiva.")
+        } sino{
+            saldo_inicial += dinero
+            imprimir("------------------------------------------------")
+            imprimir(a"Haz ingresado ${dinero}")
+            imprimir("------------------------------------------------")
+            imprimir(a"Cuenta con un saldo actual de ${saldo_inicial}")
+            imprimir("------------------------------------------------")
+        }
+
+    elif operacion == 2:
+        print("------------------------------------------------")
+        retirar_dinero = float(input("Cuánto dinero desea retirar: "))
+        if retirar_dinero < 0 or retirar_dinero > saldo_inicial:
+            print("------------------------------------------------")
+            print("Cantidad de retiro no válida. Asegúrese de tener fondos suficientes.")
+        else:
+            saldo_inicial -= retirar_dinero
+            print("------------------------------------------------")
+            print(f"Haz retirado ${retirar_dinero}")
+            print("------------------------------------------------")
+            print(f"Cuenta con un saldo actual de ${saldo_inicial}")
+
+    elif operacion == 3:
+        print("------------------------------------------------")
+        print(f"Saldo actual: ${saldo_inicial}")
+
+    elif operacion == 4:
+        print("------------------------------------------------")
+        print("Gracias por utilizar nuestro cajero, vuelva pronto!")
+        print("------------------------------------------------")
+        break
+    print("------------------------------------------------")    
+    otra_operacion = input("¿Desea realizar otra operación? (Sí/No): ").lower()
+    if otra_operacion == 'no':
+        print("------------------------------------------------")
+        print("Gracias por utilizar nuestro cajero, vuelva pronto!")
+        print("------------------------------------------------")
+        break
+
+    print("-----------------------------------")
+    print("  ¿Qué operación desea realizar?")
+    print("-----------------------------------")
+    print("(1) Ingresar dinero a su cuenta ")
+    print("(2) Retirar dinero de su cuenta ")
+    print("(3) Mostrar dinero disponible ")
+    print("(4) Salir")
+    }
+}
+
+
+

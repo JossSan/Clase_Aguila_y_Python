@@ -1,0 +1,41 @@
+# #Tipo de variables 
+# edad = 20
+# precio = 10.5
+# estudia = verdadero
+# imprimir(tipo(edad))
+# imprimir(tipo(precio))
+# imprimir(tipo(estudia))
+
+# #Variables con datos dinamicos
+# pais = ingresar("Ingrese su pais:")
+# imprimir(tipo(pais))
+
+# #Interpolacion
+# imprimir(a"Mi pais es: {pais} ")
+
+# #Ingresando numeros
+# dato1 = entero(ingresar("Ingrese un numero: "))
+# imprimir(a"Mi dato numerico es: {dato1}")
+
+# #Operaciones matematicas- datos de entrada y salida
+
+a = ingresar("Ingrese un numero: ")
+b = ingresar("Ingrese un numero: ")
+
+# procesando datos:
+sumar = a + b
+restar = a - b
+division_exacta = a / b
+division_entera = a // b
+multiplicacion = a * b
+potencia = a ** b #a = 10 y b = 2 --> 10² 
+resto_division = a % b
+
+# salida de datos 
+imprimir(a"La suma es: {sumar} ")
+imprimir(a"La resta es: {restar} ")
+imprimir(a"La división exacta es: {division_exacta} ")
+imprimir(a"La división entera es: {division_entera} ")
+imprimir(a"La multiplicación es: {multiplicacion} ")
+imprimir(a"La potencia es: {potencia} ")
+imprimir(a"El resto de la división: {resto_division} ")

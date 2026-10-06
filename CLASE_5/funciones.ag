@@ -1,0 +1,22 @@
+#Estructura de una funcion - (palabra clave) (nombre de la funcion) (parametros)
+
+# funcion nombre_funcion(parametro)
+funcion restar (a,b){
+    resta = a - b
+    retornar resta 
+}
+#invocando a las funciones
+imprimir(restar(8,5))
+#declarando en una variable
+resultado = restar(50,40)
+imprimir(resultado)
+
+
+funcion area_triangulo(b,a){
+    area = (b * a) / 2
+    retornar area
+}
+resultado = area_triangulo(10,20)
+imprimir(resultado)
+
+
